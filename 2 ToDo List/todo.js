@@ -5,6 +5,8 @@ let todoList = [
 
 displayItems();
 
+let addBtn = document.querySelector(".btn-todo");
+
 function addTodo() {
   let inputElement = document.querySelector("#todo-input");
   let dateElement = document.querySelector("#todo-date");
@@ -36,3 +38,7 @@ function displayItems() {
   }
   containerElement.innerHTML = newHtml;
 }
+
+addBtn.addEventListener("click", () => {
+  addTodo();
+});
