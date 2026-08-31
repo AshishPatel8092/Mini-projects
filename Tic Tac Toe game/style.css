@@ -1,0 +1,271 @@
+/* =========================
+   TIC TAC TOE GAME
+   ========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #548687;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* =========================
+   HEADING
+   ========================= */
+
+h1 {
+  font-size: clamp(2rem, 8vmin, 4rem);
+  margin-top: 1rem;
+}
+
+/* =========================
+   GAME CONTAINER
+   ========================= */
+
+.container {
+  min-height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+   GAME BOARD
+   ========================= */
+
+.game {
+  width: min(60vmin, 500px);
+  aspect-ratio: 1 / 1;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1.2vmin;
+}
+
+/* =========================
+   BOXES
+   ========================= */
+
+.box {
+  height: calc((100% - 2.4vmin) / 3);
+  width: calc((100% - 2.4vmin) / 3);
+
+  border-radius: 1rem;
+  border: none;
+
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+
+  font-size: clamp(2rem, 8vmin, 4rem);
+
+  color: #b0413e;
+  background-color: #ffffc7;
+
+  cursor: pointer;
+}
+
+/* =========================
+   RESET BUTTON
+   ========================= */
+
+#reset-btn,
+#new-btn {
+  padding: 1rem;
+  width: min(25vmin, 200px);
+
+  font-size: clamp(1rem, 2.5vmin, 1.25rem);
+
+  background-color: #191913;
+  color: #fff;
+
+  border-radius: 1rem;
+  border: 2px solid #fff;
+
+  cursor: pointer;
+}
+
+/* Give RESET button proper space below board */
+#reset-btn {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* =========================
+   WINNER MESSAGE
+   ========================= */
+
+/*
+   IMPORTANT:
+   100vh makes the winner section
+   occupy the complete screen.
+
+   So when a player wins:
+   - Winner message is centered
+   - NEW GAME button is centered
+   - Game board moves below this section
+   - User must scroll down to see the board
+*/
+
+.msg-container {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+
+  gap: 3rem;
+}
+
+#msg {
+  color: #ffffc7;
+  font-size: clamp(1.5rem, 5vmin, 3rem);
+}
+
+/* =========================
+   HIDE
+   ========================= */
+
+.hide {
+  display: none;
+}
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 768px) {
+  .container {
+    min-height: 55vh;
+  }
+
+  .game {
+    width: min(75vmin, 450px);
+  }
+
+  .box {
+    border-radius: 0.8rem;
+  }
+
+  #reset-btn {
+    margin-top: 2rem;
+  }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2rem;
+    margin-top: 0.8rem;
+  }
+
+  .container {
+    min-height: auto;
+    padding: 30px 0;
+  }
+
+  .game {
+    width: 90vw;
+    max-width: 400px;
+    gap: 2vw;
+  }
+
+  .box {
+    height: calc((100% - 4vw) / 3);
+    width: calc((100% - 4vw) / 3);
+
+    border-radius: 0.7rem;
+
+    font-size: 12vw;
+  }
+
+  #reset-btn,
+  #new-btn {
+    width: 42vw;
+    max-width: 180px;
+
+    padding: 0.8rem 0.5rem;
+
+    font-size: 1rem;
+  }
+
+  #reset-btn {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .msg-container {
+    min-height: 100vh;
+    gap: 2rem;
+    padding: 1rem;
+  }
+}
+
+/* =========================
+   SMALL PHONES
+   ========================= */
+
+@media (max-width: 380px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .game {
+    width: 92vw;
+    gap: 1.5vw;
+  }
+
+  .box {
+    height: calc((100% - 3vw) / 3);
+    width: calc((100% - 3vw) / 3);
+
+    font-size: 11vw;
+  }
+
+  #reset-btn,
+  #new-btn {
+    width: 44vw;
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================
+   LANDSCAPE PHONE
+   ========================= */
+
+@media (max-height: 500px) and (orientation: landscape) {
+  h1 {
+    font-size: 1.8rem;
+    margin-top: 0.3rem;
+  }
+
+  .container {
+    min-height: auto;
+    padding: 10px 0 14px;
+  }
+
+  .game {
+    width: min(60vh, 350px);
+  }
+
+  #reset-btn,
+  #new-btn {
+    padding: 0.6rem;
+  }
+
+  .msg-container {
+    min-height: 100vh;
+  }
+}
