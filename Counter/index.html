@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <h1 id="count">0</h1>
+
+      <div class="button-container">
+        <button
+          class="control-btn decBtn"
+          type="button"
+          aria-label="Decrease count"
+        >
+          −
+        </button>
+        <button
+          class="control-btn incBtn"
+          type="button"
+          aria-label="Increase count"
+        >
+          +
+        </button>
+      </div>
+
+      <label class="step-control" for="plus-minus">
+        <span>Increment/Decrement by</span>
+        <input type="number" id="plus-minus" value="1" min="1" step="1" />
+      </label>
+
+      <button class="resetBtn" type="button">Reset</button>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
