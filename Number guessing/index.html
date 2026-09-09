@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Guess Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>🎯 Guess The Number</h1>
+      <p class="subtitle">I'm thinking of a number between <b>1 and 100</b></p>
+
+      <section class="game-card" aria-label="Number guessing game">
+        <input
+          type="number"
+          id="guessInput"
+          placeholder="Enter your guess"
+          min="1"
+          max="100"
+          step="1"
+          inputmode="numeric"
+          aria-label="Your guess, from 1 to 100"
+        />
+
+        <button id="guessBtn" type="button">Guess</button>
+
+        <h3 id="message" aria-live="polite">Start Guessing...</h3>
+
+        <div class="info">
+          <div class="box">
+            <h3 id="attempts">0</h3>
+            <p>Attempts</p>
+          </div>
+
+          <div class="box">
+            <h3 id="bestScore">--</h3>
+            <p>Best Score</p>
+          </div>
+        </div>
+
+        <button id="restartBtn" type="button">🔁 New Game</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
