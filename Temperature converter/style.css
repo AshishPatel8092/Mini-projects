@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, #36c4fd, skyblue, #00adf1);
+}
+
+.container {
+  width: min(100%, 380px);
+  padding: 28px;
+  text-align: center;
+  background: rgb(224, 216, 216);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+h1 {
+  margin-bottom: 22px;
+  font-size: 1.7rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.value {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  border: 1px solid #999;
+  border-radius: 8px;
+}
+
+.choose {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 22px;
+  text-align: left;
+}
+
+.choose label {
+  margin: 0;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.choose input {
+  margin-right: 6px;
+}
+
+#submitBtn {
+  padding: 10px 20px;
+  margin-bottom: 16px;
+  color: white;
+  background: #e63946;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+
+#submitBtn:hover {
+  background: #c92b37;
+  transform: translateY(-2px);
+}
+
+.result {
+  min-height: 30px;
+  color: #1d3557;
+  font-size: 1.2rem;
+}
