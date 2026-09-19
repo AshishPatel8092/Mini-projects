@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f8fafc;
+  background: linear-gradient(135deg, #4c1d95, #1e1b4b);
+}
+
+.container {
+  width: min(100%, 440px);
+}
+
+.calculator-card {
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  background: rgba(20, 20, 28, 0.95);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.28);
+}
+
+h1 {
+  margin-bottom: 8px;
+  font-size: 2rem;
+  text-align: center;
+
+  background: linear-gradient(135deg, #4c1d95, #1e1b4b);
+  background-attachment: fixed;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@media (forced-colors: active) {
+  h1 {
+    color: CanvasText;
+  }
+}
+
+.subtitle {
+  margin-bottom: 28px;
+  color: #cbd5e1;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.form-group {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+label {
+  font-weight: 600;
+}
+
+.box {
+  width: 100%;
+  padding: 13px;
+  color: #f8fafc;
+  font: inherit;
+  background: #292933;
+  border: 1px solid #4b4b59;
+  border-radius: 8px;
+  outline: none;
+}
+
+.box:focus {
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.25);
+}
+
+.button-group {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+button {
+  padding: 13px 16px;
+  font: inherit;
+  font-weight: 700;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    background-color 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+#calculateBtn {
+  background: #7c3aed;
+}
+
+#calculateBtn:hover {
+  background: #6d28d9;
+}
+
+#resetBtn {
+  background: #475569;
+}
+
+#resetBtn:hover {
+  background: #334155;
+}
+
+.result {
+  min-height: 24px;
+  margin: 24px 0;
+  font-weight: 700;
+  text-align: center;
+}
+
+.result.success {
+  color: #86efac;
+}
+
+.result.error {
+  color: #fca5a5;
+}
+
+.bmi-guide {
+  padding-top: 20px;
+  border-top: 1px solid #3f3f4b;
+}
+
+.bmi-guide h2 {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.bmi-guide p {
+  margin: 8px 0;
+  color: #dbeafe;
+}
+
+@media (max-width: 400px) {
+  .calculator-card {
+    padding: 24px;
+  }
+
+  .button-group {
+    grid-template-columns: 1fr;
+  }
+}

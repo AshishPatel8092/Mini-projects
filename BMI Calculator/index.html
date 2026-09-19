@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Calculate your Body Mass Index (BMI) using height and weight."
+    />
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <form id="bmiForm" class="calculator-card" novalidate>
+        <h1>Body Mass Index</h1>
+        <p class="subtitle">
+          Enter your height and weight to calculate your BMI.
+        </p>
+
+        <div class="form-group">
+          <label for="height">Height (cm)</label>
+          <input
+            id="height"
+            class="box"
+            type="number"
+            placeholder="Example: 175"
+            min="1"
+            step="0.1"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="weight">Weight (kg)</label>
+          <input
+            id="weight"
+            class="box"
+            type="number"
+            placeholder="Example: 70"
+            min="1"
+            step="0.1"
+            required
+          />
+        </div>
+
+        <div class="button-group">
+          <button id="calculateBtn" type="submit">Calculate BMI</button>
+          <button id="resetBtn" type="reset">Reset</button>
+        </div>
+
+        <!-- aria-live announces result updates to screen readers -->
+        <p id="result" class="result" aria-live="polite">
+          Your BMI result will appear here.
+        </p>
+
+        <section class="bmi-guide" aria-label="BMI category guide">
+          <h2>BMI Categories</h2>
+          <p>✅ Underweight: below 18.5</p>
+          <p>✅ Healthy weight: 18.5 – 24.9</p>
+          <p>⚠️ Overweight: 25.0 – 29.9</p>
+          <p>🛑 Obesity: 30.0 or above</p>
+        </section>
+      </form>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
